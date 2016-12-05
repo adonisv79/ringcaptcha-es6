@@ -1,10 +1,10 @@
 {
-  "name": "ringcaptcha",
-  "version": "0.0.2",
-  "description": "Node.js wrapper for the RingCaptcha API",
+  "name": "ringcaptcha-es6",
+  "version": "0.1.0",
+  "description": "Node.js wrapper for the RingCaptcha API using es6 and promises",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ringcaptcha/ringcaptcha-node.git"
+    "url": "git://github.com/adonisv79/ringcaptcha-es6.git"
   },
   "keywords": [
     "ringcaptcha",
@@ -14,9 +14,11 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ringcaptcha/ringcaptcha-node/issues"
+    "url": "https://github.com/adonisv79/ringcaptcha-es6/issues"
   },
-  "homepage": "https://github.com/ringcaptcha/ringcaptcha-node",
+  "homepage": "https://github.com/adonisv79/ringcaptcha-es6",
   "dependencies": {
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
   }
 }
