@@ -18,7 +18,7 @@ Add a reference to your code.
 const RingCaptcha = require('ringcaptcha-es6');
 ```
 
-Make sure you have registered in RingCaptcha (http://www.ringcaptcha.com/) and created an app. You should have an APP_KEY, API_KEY and SECRET_KEY generated. You will need these to creaet a new instance of the RingCaptchaClient.
+Make sure you have registered in RingCaptcha (http://www.ringcaptcha.com/) and created an app. You should have an APP_KEY, API_KEY and SECRET_KEY generated. You will need these to create a new instance of the RingCaptchaClient.
 ```
 const rc = RingCaptcha.init(APP_KEY, API_KEY, SECRET_KEY, OPTIONS);
 ```
@@ -32,12 +32,21 @@ rc.getToken('en_us')
    if (!data.token) {
        throw new Error('NO_TOKEN_CREATED');
    }
-   //store this token somewhere in yur session for later use
-   req.session.ringcaotcha.token = data.token;
+   //store this token somewhere in your session for later use
+   req.session.ringcaptcha.token = data.token;
 });
 ```
 
- * **normalize(phone)** - todo
+ * **normalize(phone)** - Normalizes the phone string such that it follows a valid format.
+ ```
+ rc.normalize('+639171234567')
+ .then((data) => {
+    if (!data) {
+        throw new Error('NO_DATA_CREATED');
+    }
+    //perform your stuffs on the result data here
+ });
+ ```
  
  * **generateSMS(phone, token)** - generates an SMS verification code that will be sent to the phone number provided in the parameter. Make sure that the token parameter is the one you retrieved from the getToken() function.
 ```
