@@ -38,15 +38,15 @@ rc.getToken('en_us')
 ```
 
  * **normalize(phone)** - Normalizes the phone string such that it follows a valid format.
- ```
- rc.normalize('+639171234567')
- .then((data) => {
-    if (!data) {
-        throw new Error('NO_DATA_CREATED');
-    }
-    //perform your stuffs on the result data here
- });
- ```
+```
+rc.normalize('+639171234567')
+.then((data) => {
+   if (!data) {
+       throw new Error('NO_DATA_CREATED');
+   }
+   //perform your stuffs on the result data here
+});
+```
  
  * **generateSMS(phone, token)** - generates an SMS verification code that will be sent to the phone number provided in the parameter. Make sure that the token parameter is the one you retrieved from the getToken() function.
 ```

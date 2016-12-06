@@ -1,6 +1,6 @@
 {
   "name": "ringcaptcha-es6",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Node.js wrapper for the RingCaptcha API using ECMAScript 6 and Promises",
   "repository": {
     "type": "git",
