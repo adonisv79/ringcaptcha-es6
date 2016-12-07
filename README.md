@@ -1,4 +1,4 @@
-# Node.js Library
+# RingCaptcha (ES6 and Promise version)
 
 ## Overview
 
