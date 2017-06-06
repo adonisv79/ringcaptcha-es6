@@ -25,8 +25,9 @@ const rc = RingCaptcha.init(APP_KEY, API_KEY, SECRET_KEY, OPTIONS);
 *for now options is pretty useless, just leave it blank.
 
 ##Functions 
- * **getToken(locale)** - Gets a RingCaptcha session token
-  * @param locale - The locale/language to send the Voice call in (optional, defaults to 'en')
+ * **getToken(language_code, country_code)** - Gets a RingCaptcha session token
+  * @param language_code - The locale/language to send the Voice call in (optional, defaults to 'en')
+  * @param country_code - The country code to send the Voice call in (optional)
   ```
   rc.getToken('en_gb')
   .then((data) => {
@@ -38,10 +39,11 @@ const rc = RingCaptcha.init(APP_KEY, API_KEY, SECRET_KEY, OPTIONS);
   });
   ```
   
- * **sendVerificationCodeSMS(token, phone, locale)** - generate a new SMS verification code. Verification will be provided to the mobile number 
+ * **sendVerificationCodeSMS(token, phone, language_code, country_code)** - generate a new SMS verification code. Verification will be provided to the mobile number 
   * @param token - Should you have a token already created and valid, send it thru this parameter
   * @param phone - Phone number in international format as described in E.123.
-  * @param locale - The locale/language to send the Voice call in (optional, defaults to 'en')
+  * @param language_code - The locale/language to send the Voice call in (optional, defaults to 'en')
+  * @param country_code - The country code to send the Voice call in (optional)
   ```
   rc.sendVerificationCodeSMS("mytoken-qwertyuiop", '+639171234567')
   .then((data) => {
@@ -52,10 +54,11 @@ const rc = RingCaptcha.init(APP_KEY, API_KEY, SECRET_KEY, OPTIONS);
   });
   ```
   
- * **sendVerificationCodeVoice(token, phone, locale)** - generate a new Voice verification. Verification will be provided to the mobile number 
+ * **sendVerificationCodeVoice(token, phone, language_code, country_code)** - generate a new Voice verification. Verification will be provided to the mobile number 
   * @param token - Should you have a token already created and valid, send it thru this parameter
   * @param phone - Phone number in international format as described in E.123.
-  * @param locale - The locale/language to send the Voice call in (optional, defaults to 'en')
+  * @param language_code - The locale/language to send the Voice call in (optional, defaults to 'en')
+  * @param country_code - The country code to send the Voice call in (optional)
   ```
   rc.sendVerificationCodeVoice("mytoken-qwertyuiop", '+639171234567')
   .then((data) => {
